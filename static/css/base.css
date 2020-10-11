@@ -1,0 +1,98 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/home-pic.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Lato';
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.bike-now-button {
+    background: black;
+    color: white;
+    border-color: #9c97b3;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.bike-now-button:hover,
+.bike-now-button:active,
+.bike-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #ea5d1c;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.text-white {
+    color: white !important;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgb(210 35 35);
+    border-color: white;
+    background-color: white;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 150px;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-container {
+        padding-top: 150px;
+    }
+}
