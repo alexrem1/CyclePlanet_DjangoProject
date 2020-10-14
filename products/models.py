@@ -2,6 +2,10 @@ from django.db import models
 
 
 class bike_type(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Bike Type"
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -13,6 +17,10 @@ class bike_type(models.Model):
 
 
 class brand(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Brand"
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -24,6 +32,10 @@ class brand(models.Model):
 
 
 class condition(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Condition"
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -35,6 +47,10 @@ class condition(models.Model):
 
 
 class deals(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Deals"
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 

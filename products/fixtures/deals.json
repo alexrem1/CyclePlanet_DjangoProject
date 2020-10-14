@@ -1,4 +1,5 @@
 [
-    {"pk": 1, "model": "products.deals", "fields": {"name": "deals", "friendly_name": "Deals"}}
+    {"pk": 1, "model": "products.deals", "fields": {"name": "yes", "friendly_name": "Yes"}},
+    {"pk": 2, "model": "products.deals", "fields": {"name": "no", "friendly_name": "No"}}
 
 ]
