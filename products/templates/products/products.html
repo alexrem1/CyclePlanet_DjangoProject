@@ -15,7 +15,9 @@
 <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col">
+            <div class="col text-center text-black mt-3 mb-5">
+            <h2>Bikes</h2>
+            <hr class="w-25 mt-5 mb-5">
             </div>    
         </div>
         <div class="row">
@@ -29,24 +31,24 @@
                                         <p class="mb-0 text-black">{{ product.name }}</p>
                                 </div>
                                 {% if product.image %}
-                                <a href="">
+                                <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid pt-3 pb-3" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
-                                <a href="">
+                                <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
                                 
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
-                                        <div class="col-12 mt-3">
+                                        <div class="col-12 mt-3 text-center">
                                             {% if product.price_was %}
-                                                <p class="text-muted text-weight-light text-center text-black">WAS <i class="fas fa-long-arrow-alt-down"></i><s>{{ product.price_was }}</s></p>
+                                                <p class="text-muted text-weight-light">WAS <i class="fas fa-long-arrow-alt-down"></i><s>{{ product.price_was }}</s></p>
                                             {% endif %}
                                         </div>
-                                        <div class="col-12 mb-5">
-                                            <p class="lead mb-0 font-weight-bold text-center text-deals">NOW ${{ product.price }}</p>
+                                        <div class="col-12 mb-5 text-black text-center">
+                                            <p class="lead mb-0 font-weight-bold">NOW ${{ product.price }}</p>
                                         </div>
                                     </div>
                                 </div>

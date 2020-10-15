@@ -61,7 +61,7 @@ class deals(models.Model):
         return self.friendly_name
 
 
-class product(models.Model):
+class Product(models.Model):
     brand = models.ForeignKey('brand', null=True, blank=True, on_delete=models.SET_NULL)
     deals = models.ForeignKey('deals', null=True, blank=True, on_delete=models.SET_NULL)
     bike_type = models.ForeignKey('bike_type', null=True, blank=True, on_delete=models.SET_NULL)
