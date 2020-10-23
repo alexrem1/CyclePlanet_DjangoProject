@@ -69,7 +69,7 @@ class Product(models.Model):
 
     name = models.CharField(max_length=254)
     SKU = models.IntegerField()
-    seller_notes = models.TextField()
+    seller_notes = models.TextField(null=True, blank=True)
     price = models.DecimalField(max_digits=8, decimal_places=2)
     price_was = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True)
     photo_url = models.URLField(max_length=1024, null=True, blank=True)

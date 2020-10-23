@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- page header to push the top of it down to the bottom of the main nav bar and site header. -->
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content%}
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-12 text-white mb-5 text-center">
+            <i><p>Immerse yourself in the possibilities of cycling here at Cycle Planet. Our stock covers mountain bikes; for those looking to head into the hills, road bikes with rim or disc brakes for those who get their speed kicks from the tarmac and specific racing bikes for the most competitive of us all. Here at Cycle Planet we have your favourite brands such as Trek, Specialized, Cannondale and more. We offer bikes at all price levels and are ready to help you find the ride which matches your needs.</p></i>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-12 col-md-12 col-lg-4 mb-5">
+                <div class="image-container mb-5">
+                <h3 class="text-white text-center">Road bike</h3>
+                    <a href="{% url 'products' %}?bike_type=road_bike">
+                        <img class="img-fluid" src="{% static 'landing_images/road_bike.jpg' %}" alt="">
+                    </a>
+                </div>
+            </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="mb-5">
+                    <h3 class="text-white text-center">Mountain bike</h3>
+                        <a href="{% url 'products' %}?bike_type=mountain_bike">
+                            <img class="img-fluid" src="{% static 'landing_images/mountain_bike.jpg' %}" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="mb-5">
+                    <h3 class="text-white text-center">Racing bike</h3>
+                        <a href="{% url 'products' %}?bike_type=racing_bike">
+                            <img class="img-fluid" src="{% static 'landing_images/racing_bike.jpg' %}" alt="">
+                        </a>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+{% endblock %}

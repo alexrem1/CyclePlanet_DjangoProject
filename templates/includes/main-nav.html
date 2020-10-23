@@ -9,7 +9,7 @@
         </li>
         <hr class="w-50">
         <li class="nav-item dropdown">
-                            <a class="text-black nav-link" href="#">
+                            <a class="text-black nav-link" href="{% url 'bike_type_landing' %}">
                                 <div class="text-center">
                                     <p class="pt-3 my-0 text-black">Bike Categories</p>
                                 </div>
@@ -17,7 +17,7 @@
         </li>
         <hr class="w-50">
         <li class="nav-item dropdown">
-                            <a class="text-black nav-link" href="#">
+                            <a class="text-black nav-link" href="{% url 'brand_landing' %}">
                                 <div class="text-center">
                                     <p class="pt-3 my-0 text-black">Top Bike Brands</p>
                                 </div>
@@ -25,7 +25,15 @@
         </li>
         <hr class="w-50">
         <li class="nav-item dropdown">
-                            <a class="text-black nav-link" href="#">
+                            <a class="text-black nav-link" href="{% url 'condition_landing' %}">
+                                <div class="text-center">
+                                    <p class="pt-3 my-0 text-black">Condition</p>
+                                </div>
+                            </a>
+        </li>
+        <hr class="w-50">
+        <li class="nav-item dropdown">
+                            <a class="text-black nav-link" href="{% url 'products' %}?deals=yes">
                                 <div class="text-center">
                                     <p class="pt-3 my-0 text-black">Deals</p>
                                 </div>

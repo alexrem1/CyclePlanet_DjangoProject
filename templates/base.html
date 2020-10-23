@@ -78,11 +78,13 @@
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 <a href="{% url 'products' %}" class="dropdown-item">All bikes</a>
                                 <hr>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Bike categories</a>
+                                <a href="{% url 'bike_type_landing' %}" class="dropdown-item">Bike Categories</a>
                                 <hr>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Top bike brands</a>
+                                <a href="{% url 'brand_landing' %}" class="dropdown-item">Top Bike Brands</a>
                                 <hr>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Deals</a>
+                                <a href="{% url 'condition_landing' %}" class="dropdown-item">Condition</a>
+                                <hr>
+                                <a href="{% url 'products' %}?deals=yes" class="dropdown-item">Deals</a>
                             </div>
                     </li>
                     <li class="list-inline-item dropdown">
