@@ -17,18 +17,87 @@
         <div class="row">
             <div class="col text-center text-black mt-3 mb-5">
             <h2>Bikes</h2>
+            {% for c in current_type %}
+                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?bike_type={{ c.name }}">
+                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                    </a>
+                {% endfor %}
+                {% for c in current_condition %}
+                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?condition={{ c.name }}">
+                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                    </a>
+                {% endfor %}
+                {% for c in current_brand %}
+                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?brand={{ c.name }}">
+                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                    </a>
+                {% endfor %}
+                {% for c in current_deal %}
+                    <a class="invert-badge text-decoration-none" href="{% url 'products' %}?deals={{ c.name }}">
+                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                    </a>
+                {% endfor %}
             <hr class="w-25 mt-5 mb-5">
             </div>    
         </div>
         <div class="row">
             <div class="product-container col-10 offset-1">
-                <div class="row"></div>
+                <div class="row mt-1 mb-3">
+                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (ascending)</option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (descending)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            {% if search_term or current_type or current_sorting != 'None_None' %}
+                                <span class="small"><a href="{% url 'products' %}?bike_type=road_bike,mountain_bike,racing_bike">Bikes</a> | </span>
+                                <span class="small"><a href="{% url 'products' %}?deals=yes,no"> Deals</a> | </span>
+                                <span class="small"><a href="{% url 'products' %}?condition=new,used"> Condition</a> | </span>
+                                <span class="small"><a href="{% url 'products' %}?brand=specialized,giant,trek, cannondale,haro,khs,other,jamis,yeti,orbea,guerciotti,shimano,miyata,felt,cervelo,focus,pinarello,scott"> Brands</a> | </span>
+
+                            {% endif %}
+                            {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        </p>
+                    </div>
+                </div>
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 <div class="card-header border mb-3">
                                         <p class="mb-0 text-black">{{ product.name }}</p>
+
+                                            {% if product.bike_type %}
+                                            <p class="small mt-1 mb-0 mt-3">
+                                                <a class="text-muted" href="{% url 'products' %}?bike_type={{ product.bike_type.name }}">
+                                                    <i class="fas fa-bicycle"></i> {{ product.bike_type.friendly_name }}</a> - <a class="text-muted" href="{% url 'products' %}?brand={{ product.brand.name }}">{{ product.brand.friendly_name }}
+                                                
+                                                </a>
+                                            </p>
+                                            {% endif %}
+
+                                            {% if product.deals %}
+                                            <p class="small mt-1 mb-0">
+                                                <a class="text-muted" href="{% url 'products' %}?deals={{ product.deals.name }}">
+                                                    <i class="fas fa-long-arrow-alt-down"></i> {{ product.deals.friendly_name }}
+                                                </a>
+                                            </p>
+                                            {% endif %}
+
+                                            {% if product.condition %}
+                                            <p class="small mt-1">
+                                                <a class="text-muted" href="{% url 'products' %}?condition={{ product.condition.name }}">
+                                                    <i class="fab fa-battle-net"></i> {{ product.condition.friendly_name }}
+                                                </a>
+                                            </p>
+                                            {% endif %}
                                 </div>
                                 {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
@@ -87,4 +156,41 @@
             </div>
         </div>
     </div>
+    <div class="top-button shadow-sm rounded-0 border border-black">
+        <a class="top-link d-flex h-100">
+            <i class="fas fa-angle-up text-black mx-auto my-auto"></i>
+        </a>	
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.top-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}

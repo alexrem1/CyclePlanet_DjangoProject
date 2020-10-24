@@ -74,20 +74,24 @@
                     <p class="mt-3">Wheel size: N/A</p>
                 {% endif %}
 
-                {% if product.Type %}
-                    <p class="mt-3">Type: {{ product.Type }}</p>
-                {% else %}
-                    <p class="mt-3">Type: N/A</p>
+                {% if product.bike_type %}
+                    <p class=" mt-1 mb-0 mt-3">Bike Type: 
+                        <a class="text-black" href="{% url 'products' %}?bike_type={{ product.bike_type.name }}">{{ product.bike_type.friendly_name }}</a>
+                    </p>
                 {% endif %}
 
                 {% if product.brand %}
-                    <p class="mt-3">Brand: {{ product.brand }}</p>
+                    <p class=" mt-1 mb-0 mt-3">Brand: 
+                        <a class="text-black" href="{% url 'products' %}?brand={{ product.brand.name }}">{{ product.brand.friendly_name }}
+                            </a>
+                    </p>
                 {% else %}
                     <p class="mt-3">Brand: N/A</p>
                 {% endif %}
                 
                 {% if product.condition %}
-                    <p class="mt-3">Condition: {{ product.condition }}</p>
+                    <p class=" mt-1 mb-0 mt-3">Condition: <a class="text-black" href="{% url 'products' %}?condition={{ product.condition.name }}">{{ product.condition.friendly_name }}
+                            </a></p>
                 {% else %}
                     <p class="mt-3">Condition: N/A</p>
                 {% endif %}

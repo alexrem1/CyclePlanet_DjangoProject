@@ -13,36 +13,38 @@
 
 {% block content%}
 <div class="container"> 
-    <h3 class="text-center text-white mb-5">Bike Brands</h3>
+    <h3 class="text-center text-white mb-5">Top Bike Brands</h3>
     <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-3 w-75">
+        <div class="col-12 col-md-6 col-lg-3 w-75">
             <div class="list-group list-group-flush text-center">
                 <a href="{% url 'products' %}?brand=specialized" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">Specialized</a>
                 <a href="{% url 'products' %}?brand=trek" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">Trek</a>
                 <a href="{% url 'products' %}?brand=cannondale" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">Cannondale</a>
-                <a href="{% url 'products' %}?brand=giant" class="list-group-item list-group-item-action mb-5 text-black rounded-pill">Giant</a>   
+                <a href="{% url 'products' %}?brand=giant" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">Giant</a>
+                <a href="{% url 'products' %}?brand=felt" class="list-group-item list-group-item-action mb-5 text-black rounded-pill">Felt</a> 
             </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 w-75">
+        <div class="col-12 col-md-6 col-lg-3 w-75">
             <div class="list-group list-group-flush text-center">
                 <a href="{% url 'products' %}?brand=haro" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">Haro</a>
                 <a href="{% url 'products' %}?brand=jamis" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">Jamis</a>
                 <a href="{% url 'products' %}?brand=khs" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">KHS</a>
-                <a href="{% url 'products' %}?brand=other" class="list-group-item list-group-item-action mb-5 text-black rounded-pill">Other</a>
+                <a href="{% url 'products' %}?brand=other" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">Other</a>
+                <a href="{% url 'products' %}?brand=miyata" class="list-group-item list-group-item-action mb-5 text-black rounded-pill">Miyata</a>
             </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 w-75">
+        <div class="col-12 col-md-6 col-lg-3 w-75">
             <div class="list-group list-group-flush text-center">
                 <a href="{% url 'products' %}?brand=yeti" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">Yeti</a>
                 <a href="{% url 'products' %}?brand=orbea" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">Orbea</a>
                 <a href="{% url 'products' %}?brand=guerciotti" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">Guerciotti</a>
-                <a href="{% url 'products' %}?brand=shimano" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">Shimano</a>
-                <a href="{% url 'products' %}?brand=miyata" class="list-group-item list-group-item-action mb-5 text-black rounded-pill">Miyata</a>
+                <a href="{% url 'products' %}?brand=shimano" class="list-group-item list-group-item-action mb-5 text-black rounded-pill">Shimano</a>
+                
             </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 w-75">
+        <div class="col-12 col-md-6 col-lg-3 w-75">
             <div class="list-group list-group-flush text-center">
-                <a href="{% url 'products' %}?brand=felt" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">Felt</a>
+                
                 <a href="{% url 'products' %}?brand=cervelo" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">Cervelo</a>
                 <a href="{% url 'products' %}?brand=focus" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">Focus</a>
                 <a href="{% url 'products' %}?brand=pinarello" class="list-group-item list-group-item-action mb-2 text-black rounded-pill">Pinarello</a>
