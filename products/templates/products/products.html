@@ -60,7 +60,7 @@
                                 <span class="small"><a href="{% url 'products' %}?bike_type=road_bike,mountain_bike,racing_bike">Bikes</a> | </span>
                                 <span class="small"><a href="{% url 'products' %}?deals=yes,no"> Deals</a> | </span>
                                 <span class="small"><a href="{% url 'products' %}?condition=new,used"> Condition</a> | </span>
-                                <span class="small"><a href="{% url 'products' %}?brand=specialized,giant,trek, cannondale,haro,khs,other,jamis,yeti,orbea,guerciotti,shimano,miyata,felt,cervelo,focus,pinarello,scott"> Brands</a> | </span>
+                                <span class="small"><a href="{% url 'products' %}?brand=specialized,giant,trek,cannondale,haro,khs,other,jamis,yeti,orbea,guerciotti,shimano,miyata,felt,cervelo,focus,pinarello,scott"> Brands</a> | </span>
 
                             {% endif %}
                             {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}

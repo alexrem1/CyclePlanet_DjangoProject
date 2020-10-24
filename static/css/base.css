@@ -33,6 +33,10 @@ body {
     border-color: #9c97b3;
 }
 
+.list-inline-item:not(:last-child){
+    margin-right: 0;
+}
+
 .btn-black {
     background: black;
     color: white;
