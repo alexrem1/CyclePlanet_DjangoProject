@@ -50,14 +50,27 @@
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price }}</p>
                                     </td>
-                                    <td class="py-3 px-5">
-                                        <p class="my-0">{{ item.quantity }}</p>
+                                    <td class="py-3 w-25">
+                                    <form class="form update-form" action="" method="POST">
+                                        {% csrf_token %}
+                                        <div class="form-row">
+                                            <div class="col-12">
+                                                <div class="form-group w-50 offset-3">
+                                                    <div class="input-group">
+                                                        <input class="form-control qty_input" type="number" name="quantity" value="{{ item.quantity }}" min= "1" max="3" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
                                     </td>
+                                    
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                     <td class="py-3 px-5">
-                                        <a class="remove-item text-danger float-right top-link" href="{% url 'remove_from_bag' item.item_id %}">
+                                        <a class="update-link text-info top-link" href=""><small>Update</small></a>
+                                        <a class="text-danger float-right top-link" href="{% url 'remove_from_bag' item.item_id %}">
                                         <small>Remove</small>
                                         </a>
                                     </td>
@@ -100,4 +113,16 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+</script>
 {% endblock %}
