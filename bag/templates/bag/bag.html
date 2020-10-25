@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools%}
 
 <!-- page header to push the top of it down to the bottom of the main nav bar and site header. -->
 {% block page_header %}
@@ -33,6 +34,7 @@
                                     <th scope="col"></th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Qty</th>
+                                    <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
 
@@ -51,8 +53,11 @@
                                     <td class="py-3 px-5">
                                         <p class="my-0">{{ item.quantity }}</p>
                                     </td>
+                                    <td class="py-3">
+                                        <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                    </td>
                                     <td class="py-3 px-5">
-                                        <a class="remove-item text-danger float-right" href="{% url 'remove_from_bag' item.item_id %}">
+                                        <a class="remove-item text-danger float-right top-link" href="{% url 'remove_from_bag' item.item_id %}">
                                         <small>Remove</small>
                                         </a>
                                     </td>
@@ -63,11 +68,6 @@
                                     <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery: $0</h6>
                                     <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
-                                    {% if free_delivery_delta > 0 %}
-                                        <p class="mb-1 text-danger">
-                                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
-                                        </p>
-                                    {% endif %}
                                 </td>
                             </tr>
                             <tr>
