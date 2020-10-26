@@ -18,16 +18,20 @@ def bag_contents(request):
             'item_id': item_id,
             'quantity': quantity,
             'product': product,
+            
         })
 
+    delivery = Decimal(settings.STANDARD_DELIVERY)
 
-    grand_total = total
+    grand_total = delivery + total
 
     context = {
         'bag_items': bag_items,
         'total': total,
         'product_count': product_count,
         'grand_total': grand_total,
+        'delivery': delivery,
+        'STANDARD_DELIVERY': settings.STANDARD_DELIVERY,
     }
 
     return context
