@@ -3,6 +3,7 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
+from decimal import Decimal
 
 from products.models import Product
 
@@ -35,7 +36,7 @@ class Order(models.Model):
         accounting for delivery costs.
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
-        self.delivery_cost = settings.STANDARD_DELIVERY
+        self.delivery_cost = Decimal(settings.STANDARD_DELIVERY)
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
 

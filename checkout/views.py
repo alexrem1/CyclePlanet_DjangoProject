@@ -36,17 +36,13 @@ def checkout(request):
             order.original_bag = json.dumps(bag)
             order.save()
             for item_id, quantity in bag.items():
-                    product = Product.objects.get(id=item_id)
-                    if isinstance(quantity, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=quantity,
-                        )
-                        order_line_item.save()
-                    order.delete()
-                    return redirect(reverse('view_bag'))
-
+                product = Product.objects.get(id=item_id)
+                order_line_item = OrderLineItem(
+                    order=order,
+                    product=product,
+                    quantity=quantity,
+                )
+                order_line_item.save()
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
@@ -88,7 +84,7 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    messages.success(request, f'Order successfully processed! \
+    messages.success(request, f'Your order has been successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
 
