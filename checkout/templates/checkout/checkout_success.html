@@ -48,25 +48,26 @@
                                             <address>
                                                 <p class="text-black"><strong>Shipping Details:</strong><br>
                                                 {{ order.full_name }}<br>
+                                                {{ order.email }}<br>
+                                                {{ order.phone_number }}<br>
                                                 {{ order.street_address1 }}<br>
                                             {% if order.street_address2 %}
                                                 {{ order.street_address2 }}<br>
                                             {% endif %}
+                                                {{ order.town_or_city }}<br>
                                             {% if order.county %}
                                                 {{ order.county }}<br>
                                             {% endif %}
-                                                {{ order.town_or_city }}<br>
-                                            {% if order.postcode %}
-                                                {{ order.postcode }}<br>
-                                            {% endif %}
                                                 {{ order.country }}<br>
-                                                {{ order.phone_number }}</p>
+                                            {% if order.postcode %}
+                                                {{ order.postcode }}</p><br>
+                                            {% endif %}
+                                                
                                             </address>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-6 col-3 text-right">
-                                            
                                         </div>
                                         <div class="col-xs-6 col-9 text-right text-black">
                                             <address>
