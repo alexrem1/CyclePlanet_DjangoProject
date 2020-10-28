@@ -124,9 +124,15 @@
     </div>
     <div class="row">
         <div class="col-12">
+        {% if from_profile %}
+            <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+                    <span class="text-uppercase text-center">Back to Profile</span>
+                </a>
+        {% else %}
             <a href="{% url 'products' %}" class="btn btn-black rounded-0 my-2">
-                <span class="text-uppercase">Check out the latest deals!</span>
+                <span class="text-uppercase text-center">Check out our latest products!</span>
             </a>
+        {% endif %}
         </div>
     <div>
 </div>
