@@ -270,6 +270,24 @@ input[name='q']::placeholder {
 
 @media (max-width: 992px) {
     .header-container {
-        padding-top: 150px;
+        padding-top: 25px;
     }
+
+     .display-4.logo-font.text-white {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
 }
