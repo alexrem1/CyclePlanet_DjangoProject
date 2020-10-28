@@ -91,10 +91,11 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
+                                                    
                                                     {% for item in order.lineitems.all %}
                                                         <td>{{ item.product.name }}</td>
-                                                        {% if item.sellers_note %}
-                                                        <td>{{item.sellers_note}}.</td>
+                                                        {% if item.seller_notes %}
+                                                        <td>{{ item.seller_notes }}.</td>
                                                         {% else %}
                                                         <td>Sellers note are not available.</td>
                                                         {% endif %}
