@@ -212,7 +212,7 @@ DEFAULT_FROM_EMAIL = 'cycleplanet@example.com'
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'cycle-planet@example.com'
+    DEFAULT_FROM_EMAIL = 'cycleplanet@example.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
