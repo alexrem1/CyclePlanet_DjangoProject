@@ -14,7 +14,7 @@
 </div>
 {% endblock %}
 
-<title>{% block extra_title %} | Checkout {% endblock %}</title>
+{% block extra_title %} | Checkout {% endblock %}
 
 
 {% block content %}
@@ -114,7 +114,6 @@
 				</fieldset>
 				<!-- Pass the client secret to the view so we can get the payment intent id -->
 				<input type="hidden" value="{{ client_secret }}" name="client_secret">
-                    </fieldset>
 
 				<div class="submit-button text-right mt-5 mb-2">
 					<a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
