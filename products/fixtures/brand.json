@@ -1,20 +1,92 @@
 [
-{"pk": 1, "model": "products.brand", "fields": {"name": "specialized", "friendly_name": "Specialized"}}, 
-{"pk": 2, "model": "products.brand", "fields": {"name": "trek", "friendly_name": "Trek"}},
-{"pk": 3, "model": "products.brand", "fields": {"name": "cannondale", "friendly_name": "Cannondale"}},
-{"pk": 4, "model": "products.brand", "fields": {"name": "giant", "friendly_name": "Giant"}},
-{"pk": 5, "model": "products.brand", "fields": {"name": "haro", "friendly_name": "Haro"}}, 
-{"pk": 6, "model": "products.brand", "fields": {"name": "jamis", "friendly_name": "Jamis"}}, 
-{"pk": 7, "model": "products.brand", "fields": {"name": "khs", "friendly_name": "Khs"}}, 
-{"pk": 8, "model": "products.brand", "fields": {"name": "other", "friendly_name": "Other"}}, 
-{"pk": 9, "model": "products.brand", "fields": {"name": "yeti", "friendly_name": "Yeti"}},
-{"pk": 10, "model": "products.brand", "fields": {"name": "orbea", "friendly_name": "Orbea"}},
-{"pk": 11, "model": "products.brand", "fields": {"name": "guerciotti", "friendly_name": "Guerciotti"}},
-{"pk": 12, "model": "products.brand", "fields": {"name": "shimano", "friendly_name": "Shimano"}},
-{"pk": 13, "model": "products.brand", "fields": {"name": "miyata", "friendly_name": "Miyata"}},
-{"pk": 14, "model": "products.brand", "fields": {"name": "felt", "friendly_name": "Felt"}},
-{"pk": 15, "model": "products.brand", "fields": {"name": "cervelo", "friendly_name": "Cervelo"}},
-{"pk": 16, "model": "products.brand", "fields": {"name": "focus", "friendly_name": "Focus"}},
-{"pk": 17, "model": "products.brand", "fields": {"name": "pinarello", "friendly_name": "Pinarello"}},
-{"pk": 18, "model": "products.brand", "fields": {"name": "scott", "friendly_name": "Scott"}}
+  {
+    "pk": 1,
+    "model": "products.brand",
+    "fields": { "name": "specialized", "friendly_name": "Specialized" }
+  },
+  {
+    "pk": 2,
+    "model": "products.brand",
+    "fields": { "name": "trek", "friendly_name": "Trek" }
+  },
+  {
+    "pk": 3,
+    "model": "products.brand",
+    "fields": { "name": "cannondale", "friendly_name": "Cannondale" }
+  },
+  {
+    "pk": 4,
+    "model": "products.brand",
+    "fields": { "name": "giant", "friendly_name": "Giant" }
+  },
+  {
+    "pk": 5,
+    "model": "products.brand",
+    "fields": { "name": "haro", "friendly_name": "Haro" }
+  },
+  {
+    "pk": 6,
+    "model": "products.brand",
+    "fields": { "name": "jamis", "friendly_name": "Jamis" }
+  },
+  {
+    "pk": 7,
+    "model": "products.brand",
+    "fields": { "name": "khs", "friendly_name": "Khs" }
+  },
+  {
+    "pk": 8,
+    "model": "products.brand",
+    "fields": { "name": "other", "friendly_name": "Other" }
+  },
+  {
+    "pk": 9,
+    "model": "products.brand",
+    "fields": { "name": "yeti", "friendly_name": "Yeti" }
+  },
+  {
+    "pk": 10,
+    "model": "products.brand",
+    "fields": { "name": "orbea", "friendly_name": "Orbea" }
+  },
+  {
+    "pk": 11,
+    "model": "products.brand",
+    "fields": { "name": "guerciotti", "friendly_name": "Guerciotti" }
+  },
+  {
+    "pk": 12,
+    "model": "products.brand",
+    "fields": { "name": "shimano", "friendly_name": "Shimano" }
+  },
+  {
+    "pk": 13,
+    "model": "products.brand",
+    "fields": { "name": "miyata", "friendly_name": "Miyata" }
+  },
+  {
+    "pk": 14,
+    "model": "products.brand",
+    "fields": { "name": "felt", "friendly_name": "Felt" }
+  },
+  {
+    "pk": 15,
+    "model": "products.brand",
+    "fields": { "name": "cervelo", "friendly_name": "Cervelo" }
+  },
+  {
+    "pk": 16,
+    "model": "products.brand",
+    "fields": { "name": "focus", "friendly_name": "Focus" }
+  },
+  {
+    "pk": 17,
+    "model": "products.brand",
+    "fields": { "name": "pinarello", "friendly_name": "Pinarello" }
+  },
+  {
+    "pk": 18,
+    "model": "products.brand",
+    "fields": { "name": "scott", "friendly_name": "Scott" }
+  }
 ]

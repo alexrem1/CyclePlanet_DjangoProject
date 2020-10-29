@@ -107,14 +107,15 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # The account authentication method is what tells allauth that we want to allow
 #  authentication using either usernames or emails.
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
-# These three email settings here make it so that an email is required to 
-# register for the site. Verifying your email is mandatory so we know users
+# These three email settings here make it so that an email is required to
+# # register for the site. Verifying your email is mandatory so we know users
 # are using a real email. And they're gonna be required to enter their email
-#  twice on the registration page to make sure that they haven't made any typos.
+#  twice on the registration page to make sure that they haven't
+# made any typos.
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
-# Finally we're setting a minimum username length of four characters. And 
+# Finally we're setting a minimum username length of four characters. And
 # specifying a login url and a url to redirect back to after logging in.
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
@@ -144,16 +145,20 @@ else:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
 
@@ -189,7 +194,7 @@ if 'USE_AWS' in os.environ:
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
-    
+
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'alexrem1-cycle-planett'
     AWS_S3_REGION_NAME = 'us-east-1'

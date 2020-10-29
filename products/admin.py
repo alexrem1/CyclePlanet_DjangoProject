@@ -3,6 +3,7 @@ from .models import Product, bike_type, brand, deals, condition
 
 # Register your models here.
 
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'SKU',
@@ -15,11 +16,13 @@ class ProductAdmin(admin.ModelAdmin):
         'image',
     )
 
+
 class Bike_typeAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
     )
+
 
 class BrandAdmin(admin.ModelAdmin):
     list_display = (
@@ -27,11 +30,13 @@ class BrandAdmin(admin.ModelAdmin):
         'name',
     )
 
+
 class DealsAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
     )
+
 
 class ConditionAdmin(admin.ModelAdmin):
     list_display = (

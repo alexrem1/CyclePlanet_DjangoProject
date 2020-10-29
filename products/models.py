@@ -62,16 +62,21 @@ class deals(models.Model):
 
 
 class Product(models.Model):
-    brand = models.ForeignKey('brand', null=True, blank=True, on_delete=models.SET_NULL)
-    deals = models.ForeignKey('deals', null=True, blank=True, on_delete=models.SET_NULL)
-    bike_type = models.ForeignKey('bike_type', null=True, blank=True, on_delete=models.SET_NULL)
-    condition = models.ForeignKey('condition', null=True, blank=True, on_delete=models.SET_NULL)
+    brand = models.ForeignKey(
+        'brand', null=True, blank=True, on_delete=models.SET_NULL)
+    deals = models.ForeignKey(
+        'deals', null=True, blank=True, on_delete=models.SET_NULL)
+    bike_type = models.ForeignKey(
+        'bike_type', null=True, blank=True, on_delete=models.SET_NULL)
+    condition = models.ForeignKey(
+        'condition', null=True, blank=True, on_delete=models.SET_NULL)
 
     name = models.CharField(max_length=254)
     SKU = models.IntegerField()
     seller_notes = models.TextField(null=True, blank=True)
     price = models.DecimalField(max_digits=8, decimal_places=2)
-    price_was = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True)
+    price_was = models.DecimalField(
+        max_digits=8, decimal_places=2, null=True, blank=True)
     photo_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
@@ -80,7 +85,7 @@ class Product(models.Model):
     gender = models.TextField()
     Type = models.TextField()
     size = models.TextField()
-    number_of_speeds = models.TextField()        
+    number_of_speeds = models.TextField()
 
     def __str__(self):
         return self.name

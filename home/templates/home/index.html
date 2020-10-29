@@ -3,27 +3,28 @@
 
 <!-- page header to push the top of it down to the bottom of the main nav bar and site header. -->
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+<div class="container header-container">
+	<div class="row">
+		<div class="col"></div>
+	</div>
+</div>
 {% endblock %}
 
 
 {% block content%}
-    <div class="container h-20">
-        <div class="row h-20">
-            <div class="col-7 col-md-6 mx-auto my-auto">
-                <h1 class="display-4 logo-font text-white">
-                We can cater to your biking needs!
-                </h1>
-            </div>    
-            <div class="my-5">
-                <h4>
-                    <a href="{% url 'products' %}" class="bike-now-button btn btn-lg rounded-10 text-uppercase py-3">Find yourself a bike today</a>
-                </h4>
-            </div>
-        </div>
-    </div>
+<div class="container h-20">
+	<div class="row h-20">
+		<div class="col-7 col-md-6 mx-auto my-auto">
+			<h1 class="display-4 logo-font text-white">
+				We can cater to your biking needs!
+			</h1>
+		</div>
+		<div class="my-5">
+			<h4>
+				<a href="{% url 'products' %}" class="bike-now-button btn btn-lg rounded-10 text-uppercase py-3">Find
+					yourself a bike today</a>
+			</h4>
+		</div>
+	</div>
+</div>
 {% endblock %}

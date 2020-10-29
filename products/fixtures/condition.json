@@ -1,6 +1,12 @@
 [
-    
-{"pk": 1, "model": "products.condition", "fields": {"name": "new", "friendly_name": "New"}},
-{"pk": 2, "model": "products.condition", "fields": {"name": "used", "friendly_name": "Used"}}
-
+  {
+    "pk": 1,
+    "model": "products.condition",
+    "fields": { "name": "new", "friendly_name": "New" }
+  },
+  {
+    "pk": 2,
+    "model": "products.condition",
+    "fields": { "name": "used", "friendly_name": "Used" }
+  }
 ]

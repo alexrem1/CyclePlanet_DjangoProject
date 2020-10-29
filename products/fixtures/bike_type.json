@@ -1,5 +1,17 @@
 [
-{"pk": 1, "model": "products.bike_type", "fields": {"name": "road_bike", "friendly_name": "Road Bike"}}, 
-{"pk": 2, "model": "products.bike_type", "fields": {"name": "mountain_bike", "friendly_name": "Mountain Bike"}},
-{"pk": 3, "model": "products.bike_type", "fields": {"name": "racing_bike", "friendly_name": "Racing Bike"}}
+  {
+    "pk": 1,
+    "model": "products.bike_type",
+    "fields": { "name": "road_bike", "friendly_name": "Road Bike" }
+  },
+  {
+    "pk": 2,
+    "model": "products.bike_type",
+    "fields": { "name": "mountain_bike", "friendly_name": "Mountain Bike" }
+  },
+  {
+    "pk": 3,
+    "model": "products.bike_type",
+    "fields": { "name": "racing_bike", "friendly_name": "Racing Bike" }
+  }
 ]
