@@ -1,7 +1,10 @@
 <tr>
 	<td colspan="5" class="pt-5 text-right">
+        <p class="lead mb-5 d-md-block">Your bag is empty.</p>
+        {% if bag_item %}
 		<h6><strong>Subtotal: ${{ total|floatformat:2 }}</strong></h6>
 		<h6>Standard Shipping: ${{ delivery|floatformat:2  }} </h6>
 		<h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+        {% endif %}
 	</td>
 </tr>
