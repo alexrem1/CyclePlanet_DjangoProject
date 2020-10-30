@@ -85,7 +85,6 @@
 								<thead>
 									<tr class="line">
 										<td class="text-left"><strong>Product Name</strong></td>
-										<td class="text-left"><strong>Sellers Notes</strong></td>
 										<td class="text-center"><strong>Price</strong></td>
 										<td class="text-center"><strong>Qty</strong></td>
 										<td class="text-center"><strong>Subtotal</strong></td>
@@ -96,11 +95,6 @@
 
 										{% for item in order.lineitems.all %}
 										<td>{{ item.product.name }}</td>
-										{% if item.seller_notes %}
-										<td>{{ item.seller_notes }}.</td>
-										{% else %}
-										<td>Sellers note are not available.</td>
-										{% endif %}
 										<td class="text-center">${{item.product.price}}</td>
 										<td class="text-center">{{item.quantity}}</td>
 										<td class="text-right">${{ item.product.price | calc_subtotal:item.quantity }}
@@ -108,12 +102,12 @@
 									</tr>
 									{% endfor %}
 									<tr>
-										<td colspan="3"></td>
+										<td colspan="2"></td>
 										<td class="text-right"><strong>Shipping Cost</strong></td>
 										<td class="text-right"><strong> ${{ order.delivery_cost }}</strong></td>
 									</tr>
 									<tr>
-										<td colspan="3">
+										<td colspan="2">
 										</td>
 										<td class="text-right"><strong>Grand Total</strong></td>
 										<td class="text-right"><strong> ${{ order.grand_total }}</strong></td>

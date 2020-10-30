@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, bike_type, condition, deals, brand
+from .models import Product, bike_type, condition, deals, brand, ProductReview
 from .forms import ProductForm
 
 # Create your views here.
@@ -84,9 +84,11 @@ def product_detail(request, product_id):
     """ A view to show individual product detail """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = ProductReview.objects.filter(product=product).order_by("-comment")
 
     context = {
         'product': product,
+        'reviews': reviews,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -180,3 +182,18 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+def add_review(request, product_id):
+    if request.user.is_authenticated:
+        product = get_object_or_404(Product, pk=product_id)
+        review = ProductReview()
+        if request.method == 'POST':
+            review.comment = request.POST["comment"]
+            review.user = request.user
+            review.product = product
+            review.save()
+            return redirect(reverse('product_detail', args=[product_id]))
+    else:
+        messages.error(request, "Sign up to leave a review.")
+        return redirect("account_login")

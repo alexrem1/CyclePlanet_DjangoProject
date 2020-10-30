@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, bike_type, brand, deals, condition
+from .models import Product, bike_type, brand, deals, condition, ProductReview
 
 # Register your models here.
 
@@ -45,8 +45,17 @@ class ConditionAdmin(admin.ModelAdmin):
     )
 
 
+class ProductReviewAdmin(admin.ModelAdmin):
+    list_display = (
+        'product',
+        'user',
+        'date'
+    )
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(bike_type, Bike_typeAdmin)
 admin.site.register(brand, BrandAdmin)
 admin.site.register(deals, DealsAdmin)
 admin.site.register(condition, ConditionAdmin)
+admin.site.register(ProductReview, ProductReviewAdmin)

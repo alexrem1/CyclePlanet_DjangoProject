@@ -115,6 +115,10 @@ input[name="q"]::placeholder {
   color: #aab7c4;
 }
 
+.noborder {
+    border-style: none !important;
+}
+
 /* boostrap toasts */
 
 .message-container {
