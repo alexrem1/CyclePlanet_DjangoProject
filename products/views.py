@@ -84,7 +84,7 @@ def product_detail(request, product_id):
     """ A view to show individual product detail """
 
     product = get_object_or_404(Product, pk=product_id)
-    reviews = ProductReview.objects.filter(product=product).order_by
+    reviews = ProductReview.objects.filter(product=product).order_by("-comment")
 
     context = {
         'product': product,
