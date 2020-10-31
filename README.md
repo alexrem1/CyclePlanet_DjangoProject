@@ -17,78 +17,90 @@ With the user at the forefront of this project, I wanted to create a simple ecom
 ### Viewing and Navigation
 
 - As a shopper I want to be able to view a list of products so that I can select some to purchase.
- > My products view allows shopper to do this as it ultimately passes through all products within my database
+
+  - My products view allows shopper to do this as it ultimately passes through all products within my database
 
 - As a shopper I want to be able to view a specific category of products so that I can quickly find products I'm interested in without having to search through all the products.
- > Users of the site who land on the products page will have links that allow them to easily filter whichever category they're interested in and quickly identify what product they are interested in
+  - Users of the site who land on the products page will have links that allow them to easily filter whichever category they're interested in and quickly identify what product they are interested in
 
-- As a shopper I want to be able to view individual products details so that I can Identify the price, condition, sellers notes, type of product , product name, image, model, colour and size etc.
- > Users who click on the products image will be taken to a page containing all the useful details of the product so they may make an well informed decision about wether they wil purchase the product.
+* As a shopper I want to be able to view individual products details so that I can Identify the price, condition, sellers notes, type of product , product name, image, model, colour and size etc.
 
-- As a shopper I want to be able to quickly identify any deals so that I can take advantage of special savings on products I'd like to purchase.
- > Included in the main navigation bar is a heading labled 'deals' which instantly allows a user to identify exactly which products are on offer. Users may also view this from the products page by clicking on the 'deals' link automatically filtering only products that are on offer
+  - Users who click on the products image will be taken to a page containing all the useful details of the product so they may make an well informed decision about wether they wil purchase the product.
 
-- As a shopper I want to be able to easily view the total of my purchases at any time so that I can spend as much money as I see fit or remind myself to stay below a certain amount.
- > Contained within the main navigation bar is the shopping bag with an amount displayed that is always updated whenever a product is added to the shopping bag which constantly reminds the user of how much they may be potentially spending.
+* As a shopper I want to be able to quickly identify any deals so that I can take advantage of special savings on products I'd like to purchase.
+
+  - Included in the main navigation bar is a heading labled 'deals' which instantly allows a user to identify exactly which products are on offer. Users may also view this from the products page by clicking on the 'deals' link automatically filtering only products that are on offer
+
+* As a shopper I want to be able to easily view the total of my purchases at any time so that I can spend as much money as I see fit or remind myself to stay below a certain amount.
+  - Contained within the main navigation bar is the shopping bag with an amount displayed that is always updated whenever a product is added to the shopping bag which constantly reminds the user of how much they may be potentially spending.
 
 ### Registration and User accounts
 
 - As a site user I want to be able to easily register for an account so that I can have a personal account and be able to view my profile
- > Thanks to django's builtin allauth package, once all the right settings had been configured within my project, allowing user registration was quick and great for user experience
+
+  - Thanks to django's builtin allauth package, once all the right settings had been configured within my project, allowing user registration was quick and great for user experience
 
 - As a site user I want to be able to easily login or logout so that I can access my personal account info
- > Via the power of django's allauth, if the user is authenticated (registered) then login and logout is available for them, otherwise a login and register is available
+
+  - Via the power of django's allauth, if the user is authenticated (registered) then login and logout is available for them, otherwise a login and register is available
 
 - As a site user I want to be able to easily recover my password in case I forget it so that I can recover access to my account
- > When logging in, a forgot password link can be found on the page, following the instructions to check their email and then reset the password is quick and easy enough thanks to allauth
 
-- As a site user I want to be able to recieve an email confirmation after registration so that I can verify that my account registration was successful
- > Users who register recieve a confirmation email containing a link that updates the users authentication to log in to the site
+  - When logging in, a forgot password link can be found on the page, following the instructions to check their email and then reset the password is quick and easy enough thanks to allauth
+
+- As a site user I want to be able to recieve an email confirmation after registration so that I can verify that my account registration was successful - Users who register recieve a confirmation email containing a link that updates the users authentication to log in to the site
 
 - As a site user I want to be able to have personalized user information so that I can view my personal order history and order confirmations
- > Now the user is authenticated, they can now see their own profile containing their information, order history and order confirmations
+  - Now the user is authenticated, they can now see their own profile containing their information, order history and order confirmations
 
 ### Sorting and Searching
 
 - As a shopper I want to be able to sort the list of available products so that I can easily identify the best prices and alphabetically sort products
- > Within the products page, alphabetical and pricing sorting is available to help assist the user finding the right product for them via low to high price sorting for example
-  
+  - Within the products page, alphabetical and pricing sorting is available to help assist the user finding the right product for them via low to high price sorting for example
 - As a shopper I want to be able to sort a specific category of product so that I can find the best-priced product in a specific category and sort the products in that category by name
- > Mentioned earlier is the ability to filter a certain category, condition, for example and with that now filtered products page users are able to sort via price or by name
-  
+
+  - Mentioned earlier is the ability to filter a certain category, condition, for example and with that now filtered products page users are able to sort via price or by name
+
 - As a shopper I want to be able to search for a product by name or description so that I can find a specific product I'd like to purchase
- > Users can type into the search bar in the main nav bar and search results, if they exist, will be displayed
+
+  - Users can type into the search bar in the main nav bar and search results, if they exist, will be displayed
 
 - As a shopper I want to be able to easily see what I've searched for and the number of results so that I can quickly decide wether the product I want is available
-> users can type into the search bar in the main nav bar and it will display what the user has searched as well as search results if they exist
+  - users can type into the search bar in the main nav bar and it will display what the user has searched as well as search results if they exist
 
 ### Purchasing and Checkout
 
 - As a shopper I want to be able to easily select the quantity of a product when purchasing it so that I can ensure I dont accidentally select the wrong product or quantity
-> Contained in the product details page will be a quantity input box where users will then have the choice to enter what quantity they would like
+
+  - Contained in the product details page will be a quantity input box where users will then have the choice to enter what quantity they would like
 
 - As a shopper I want to be able to view items in my bag to be purchased so that I can identify the total cost of my purchase and at all times I will recieve
- > the shopping bag once clicked contains all products that have been added to the bag, the quantity, the subtotal, delivery cost and grand total so users are always informed of what they are buying and for how much
+
+  - the shopping bag once clicked contains all products that have been added to the bag, the quantity, the subtotal, delivery cost and grand total so users are always informed of what they are buying and for how much
 
 - As a shopper I want to be able to easily enter my payment information so that I can checkout quickly and with no hassle
- > STRIPE credit-card processor allows users to do so
+
+  - STRIPE credit-card processor allows users to do so
 
 - As a shopper I want to be able to feel my personal and payment information is safe and secure so that I can confidently provide the needed info to make a purchase
- > STRIPE has been audited by a PCI-certified auditor and is certified to PCI Service Provider Level 1 which is the most stringent level of certification available in the payments industry
+
+  - STRIPE has been audited by a PCI-certified auditor and is certified to PCI Service Provider Level 1 which is the most stringent level of certification available in the payments industry
+
 - As a shopper I want to be able to view my order confirmation after checkout so that I can verify that i haven't made any mistakes
- > a combination of views and templates set up in the checkout app, after completing their, users will be redirected to a copy of their confirmation order. This can also be seen in their user specific profile under my account
+
+  - a combination of views and templates set up in the checkout app, after completing their, users will be redirected to a copy of their confirmation order. This can also be seen in their user specific profile under my account
 
 - As a shopper I want to be able to recieve an email confirmation after checking out so that I can keep the confirmation of what I've purchased for my records
- > email confirmations have been set up and so users will receive a customised email for this
+  - email confirmations have been set up and so users will receive a customised email for this
 
 ### Admin and Management
 
 - As a store owner I want to be able to add a product so that I can add new items to my store
 - As a store owner I want to be able to edit/update a product so that I can change product prices, descriptions, images and other product criteria
 - As a store owner I want to be able to delete a product so that I can remove items that are no longer for sale
- > CRUD functionality has been enabled for superusers to create a new product, edit or update an existing product and delete a prodcut
+  - CRUD functionality has been enabled for superusers to create a new product, edit or update an existing product and delete a prodcut
 
-COMPLETE WIREFRAMES HERE
+Unfortunately I didn't have time to come up with a solid framework going into this project and I believe my project demonstrates my understanding.
 
 This site is aimed at potential users who are interested in purchasing quality bicycles. I designed my website with the user in mind to enhance their user experience and believe it will increase my chances.
 
@@ -196,7 +208,7 @@ This site is aimed at potential users who are interested in purchasing quality b
 - **Psycopg2-binary 2.8.6 -** Psycopg is the most popular PostgreSQL database adapter for the Python programming language. Its main features are
   the complete implementation of the Python DB API 2.0 specification and the thread safety. https://pypi.org/project/psycopg2/
 
-- **Django Storages 1.10.1 -** Django Storages is a collection of custom storage backends for Django.
+- **Django Storages 1.10.1 -** Django Storages is a collection of custom storage backends for Django. https://django-storages.readthedocs.io/en/latest/
 
 - **boto3 1.16.6 -** Boto is the Amazon Web Services (AWS) SDK for Python. It enables Python developers to create, configure, and manage AWS
   services, such as EC2 and S3. https://boto3.amazonaws.com/v1/documentation/api/latest/index.html
@@ -210,6 +222,7 @@ This site is aimed at potential users who are interested in purchasing quality b
 The main basic functions of the site that required rigorous testing in different scenarios are listed below.
 
 - **Navbar**
+
   - All Navbar links are coded within the base.html and includes (main-nav.html and mobile-top-header) that extends to each html page. The logo is a home link that has been tested form each page and each link
     (e.g. `Products`; `Register`; `Login`; `Bag`; `Product Management`; `Profile`; `Logout`) works correctly accross all devices and screen resolutions. Each link directs the
     user to the relevant page and the `Logout` button logs the user out of the site, not before the user being prompted to cancel or log out.
@@ -218,7 +231,7 @@ The main basic functions of the site that required rigorous testing in different
 
   - The Search bar is used to search all available products across the site and can be found contained in the nav bar inbetween the logo and the dropdown links. The search bar returns items that are related to the `name`, `SKU` and `seller notes` of the product. Users who don't enter before they search will be met with an error message letting them know they didn't search for anthing. This function works correctly.
 
-  - **To the top button**
+- **To the top button**
 
   - This works as intended, on all screen sizes and resolutions.
 
@@ -247,79 +260,77 @@ The main basic functions of the site that required rigorous testing in different
 
   - Users are able to sort products alphabetically and by its price by clicking on the `sort by` select box. This would redirect back to the same page with one of 4 options (price - low to high / high to low or alphabetically - A-Z / Z-A) selected and thus the sorted method initialised. Right across from the 'sort by' feature is the sorting method. Users click on either condition, brand, deals or bikes where in each instance users are offered multiple sorting parameters. For example a user may want to filter a mountain bike and sort with a method of low to high price. This has been tested extensively from the first implementation and it has worked as intended.
 
-
-- **Registration Form**
+* **Registration Form**
 
   - In the Registration Page the user can set up an account by inserting a Username, Email Address, Email Address Confirmation, Password and Password Confirmation. The form automatically cross
     checks the the validity of the Email Address and Password Confirmation. There is an optional link for the user to Sign In if they already have an account.
 
-- **Login Page**
+* **Login Page**
 
   - A user who has already registered can log in to the site via the `Login` Navbar menu item. This page authenticates the user against those stored in the database.
     A verified user will be logged in and if they're not verified but have already signed up a new confirmation email will be sent to the registered address. There is a Forgotten password link and a link for a user who is not registered.
 
-- **Password Reset Page**
+* **Password Reset Page**
 
   - if a user has prevbiously registered to the site they can insert their email address into the field and reset their password. An email is sent via smtp.gmail.com to the
     users email address. This functionality has been tested utilising multiple email addresses. The link in the email allows the user to create a new password, new password confirmation and then confirm.
     Once completed the user is directed back to the Login Page where they recieve a message success letting them know they've verified their email address and are able to login with thier email address or user name and password.This function has been
     rigorously tested.
 
-- **Shopping Bag Page**
+* **Shopping Bag Page**
 
   - The shopping bag page displays products that the user has selected to purchase, its quantity, its subtotal, the delivery cost and the grand total. The user can amend the remove the product(s) to be purchased using the `remove` link. If the user clicks that button the product will be deleted from their shopping bad. This function has been extensively tested. The 'Grand Total' figure has been calculated by the product ID's and quantities of each product first within /bag/contexts.py/ and finally in /bag/views.py/. This has been tested repeatidly. The `Secure Checkout` button directs the user to the Checkout page and the `Continue Shopping` button takes the user back to the products page with their prior products still in the Bag.
 
-- **Profile Page - Form**
+* **Profile Page - Form**
 
   - This form allows the user to update their 'Default Delivery Information' (e.g. Street Address 1, Street Address 2, Town or City, County, Post Code, Country and Phone Number). This information will be stored under the 'User Profile' information in the Django database and can be utilised to pre-populate fields in the Checkout page.
 
-- **Checkout Page**
+* **Checkout Page**
 
   - The Checkout page displays the products that the user has selected to purchase along with its image, their related quantities and prices, subtotal, delivery cost and the grand total shopping bag figure. These elements have been tested and return the correct figures.
 
-- **Checkout - Payment Details Form**
+* **Checkout - Payment Details Form**
 
   - The Checkout Payment Details form is directly linked to the Stripe payment API and allows the user to input their Full Name, Email Address, Phone Number and their shipping details (if the user has already registered their Profile details and opted to save their details to the database, these fields will be prepopulated).
 
-- **Checkout - Payment Card Info Form**
+* **Checkout - Payment Card Info Form**
 
   - The user is able to input their Credit card information to purchase the shopping bag contents. This function has only been tested using Stripes dummy card information that consists of `Credit card number` 4242424242424242; `Month` A month in advance of current month; `Year` a year in advance of the current year and `Security Code` 424;. This functionality has been tested and can be checked in the /admin/home/checkout/orders/ section of the Admin panel. These payments are also visible on the https://dashboard.stripe.com/payments page. This confirms all the payments that have been passed through the system. The payment will not submit through the `Complete Order` button if the card information is incorrect and if the cart is empty and the user attempts to checkout, they'll be redirected back to the home page with an error message saying there's nothing in your bag.
 
-- **Checkout - Submit Payment Button**
+* **Checkout - Submit Payment Button**
 
   - Submits the Payment and returns the user to the Homepage with the Django success banner 'You have successfully paid'. If payment is not successful, the user will be not
     leave the Checkout page.
 
-- **Profile Page - Order History**
+* **Profile Page - Order History**
 
   - The order history has been tested via multiple checkout successes which prints out a order number that attaches to the users order history in their profile each time containing their order number, your shipping details, order date and everything relating to costs. Also a automated email is sent out containing the exact same information. Everything works as intended
 
-* **AWS S3**
+- **AWS S3**
 
   - The AWS S3 allows access to stored files within the site owners AWS bucket that are shared through the users AWS account. The accompanying AWS info is linked through the relavant AWS info in the
     `settings.py` file. The testing of this functionality is shown in the availability of the stored data in the post prodution database andsite.
 
-* **Responsive / Mobile First design**
+- **Responsive / Mobile First design**
 
   - In some instances I've tried to think about a mobile first approach by implementing a collapsable navbar on smaller screens, smaller buttons, smaller text-display and refactoring the shopping bag
   - Continuous testing throughout the development has been implemented to check the quality of the code. The aim is to check the functionality of the code on different devices (mobile, tablet, desktop) with an overall perspective of responsive pkand mobile first design. The site has been viewed and tested in **Firefox**, **Safari**, **Chrome**
     **Microsoft Edge** and **Explorer**. The devices used to test the site are **iPhone 5/SE**, **Samsung Galaxy**, **iPad**, **iPad Pro**
     **iPhone X**, **iPhone 6/7/8**, **Pixel 2**, **Pixel 2 XL** , **Hudle2** and **Samsung / Lenovo / HP laptop**.
 
-* **W3 Nu Html Checker**
+- **W3 Nu Html Checker**
 
   - All .html files require validation through the online checker. This ensures that the code is more legible and does
     not contain formatting errors. https://validator.w3.org/
 
-* **W3C CSS Validator**
+- **W3C CSS Validator**
 
   - The style.css file requires validation through the online checker. This ensures that the code is more legible and does
     not contain formatting errors. https://jigsaw.w3.org/css-validator/validator
 
-* **PEP8 Online**
+- **PEP8 Online**
   - The Python (.py) pages require validation through the online checker. This ensures that the code is more legible and does not contain formatting
     errors. http://pep8online.com/
-
 
 ## Deployment
 
@@ -393,10 +404,10 @@ Data_Bike.json - came from this free dataset at Kaggle: https://www.kaggle.com/t
 
 ### Media
 
-All landing page images and favicon - used have been displayed with the permisson of Blindside-Brewing.
+All landing page images have been sourced from https://unsplash.com/
 
 Favicon – created using https://www.freelogodesign.org/
 
 ### Acknowledgments
 
-I would like to thank everyone involved in, especially my mentor Sandeep Aggarwal and the Code Insitute Tutors for both their invaluable feedback.
+I would like to thank everyone involved in this project and I can't thank you all enough.
