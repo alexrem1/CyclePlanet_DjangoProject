@@ -16,75 +16,77 @@ With the user at the forefront of this project, I wanted to create a simple ecom
 
 ### Viewing and Navigation
 
-> As a shopper I want to be able to view a list of products so that I can select some to purchase.
+- As a shopper I want to be able to view a list of products so that I can select some to purchase.
+ > My products view allows shopper to do this as it ultimately passes through all products within my database
 
-- my products view allows shopper to do this as it ultimately passes through all products within my database
+- As a shopper I want to be able to view a specific category of products so that I can quickly find products I'm interested in without having to search through all the products.
+ > Users of the site who land on the products page will have links that allow them to easily filter whichever category they're interested in and quickly identify what product they are interested in
 
-> As a shopper I want to be able to view a specific category of products so that I can quickly find products I'm interested in without having to search through all the products.
+- As a shopper I want to be able to view individual products details so that I can Identify the price, condition, sellers notes, type of product , product name, image, model, colour and size etc.
+ > Users who click on the products image will be taken to a page containing all the useful details of the product so they may make an well informed decision about wether they wil purchase the product.
 
-- users of the site who land on the products page will have links that allow them to easily filter whichever category they're interested in and quickly identify what product they are interested in
+- As a shopper I want to be able to quickly identify any deals so that I can take advantage of special savings on products I'd like to purchase.
+ > Included in the main navigation bar is a heading labled 'deals' which instantly allows a user to identify exactly which products are on offer. Users may also view this from the products page by clicking on the 'deals' link automatically filtering only products that are on offer
 
-> As a shopper I want to be able to view individual products details so that I can Identify the price, condition, sellers notes, type of product , product name, image, model, colour and size etc.
-
-- users who click on the products image will be taken to a page containing all the useful details of the product so they may make an well informed decision about wether they wil purchase the product.
-
-> As a shopper I want to be able to quickly identify any deals so that I can take advantage of special savings on products I'd like to purchase.
-
-- included in the main navigation bar is a heading labled 'deals' which instantly allows a user to identify exactly which products are on offer. Users may also view this from the products page by clicking on the 'deals' link automatically filtering only products that are on offer
-
-> As a shopper I want to be able to easily view the total of my purchases at any time so that I can spend as much money as I see fit or remind myself to stay below a certain amount.
-
-- contained within the main navigation bar is the shopping bag with an amount displayed that is always updated whenever a product is added to the shopping bag which constantly reminds the user of how much they may be potentially spending.
+- As a shopper I want to be able to easily view the total of my purchases at any time so that I can spend as much money as I see fit or remind myself to stay below a certain amount.
+ > Contained within the main navigation bar is the shopping bag with an amount displayed that is always updated whenever a product is added to the shopping bag which constantly reminds the user of how much they may be potentially spending.
 
 ### Registration and User accounts
 
-> As a site user I want to be able to easily register for an account so that I can have a personal account and be able to view my profile
+- As a site user I want to be able to easily register for an account so that I can have a personal account and be able to view my profile
+ > Thanks to django's builtin allauth package, once all the right settings had been configured within my project, allowing user registration was quick and great for user experience
 
-- thanks to django's builtin allauth package, once all the right settings had been configured within my project, allowing user registration was quick and great for user experience
-  > As a site user I want to be able to easily login or logout so that I can access my personal account info
-- via the power of django's allauth, if the user is authenticated (registered) then login and logout is available for them, otherwise a login and register is available
-  > As a site user I want to be able to easily recover my password in case I forget it so that I can recover access to my account
-- When logging in, a forgot password link can be found on the page, following the instructions to check their email and then reset the password is quick and easy enough thanks to allauth
-  > As a site user I want to be able to recieve an email confirmation after registration so that I can verify that my account registration was successful
-- users who register recieve a confirmation email containing a link that updates the users authentication to log in to the site
-  > As a site user I want to be able to have personalized user information so that I can view my personal order history and order confirmations
-- now the user is authenticated, they can now see their own profile containing their information, order history and order confirmations
+- As a site user I want to be able to easily login or logout so that I can access my personal account info
+ > Via the power of django's allauth, if the user is authenticated (registered) then login and logout is available for them, otherwise a login and register is available
+
+- As a site user I want to be able to easily recover my password in case I forget it so that I can recover access to my account
+ > When logging in, a forgot password link can be found on the page, following the instructions to check their email and then reset the password is quick and easy enough thanks to allauth
+
+- As a site user I want to be able to recieve an email confirmation after registration so that I can verify that my account registration was successful
+ > Users who register recieve a confirmation email containing a link that updates the users authentication to log in to the site
+
+- As a site user I want to be able to have personalized user information so that I can view my personal order history and order confirmations
+ > Now the user is authenticated, they can now see their own profile containing their information, order history and order confirmations
 
 ### Sorting and Searching
 
-> As a shopper I want to be able to sort the list of available products so that I can easily identify the best prices and alphabetically sort products
+- As a shopper I want to be able to sort the list of available products so that I can easily identify the best prices and alphabetically sort products
+ > Within the products page, alphabetical and pricing sorting is available to help assist the user finding the right product for them via low to high price sorting for example
+  
+- As a shopper I want to be able to sort a specific category of product so that I can find the best-priced product in a specific category and sort the products in that category by name
+ > Mentioned earlier is the ability to filter a certain category, condition, for example and with that now filtered products page users are able to sort via price or by name
+  
+- As a shopper I want to be able to search for a product by name or description so that I can find a specific product I'd like to purchase
+ > Users can type into the search bar in the main nav bar and search results, if they exist, will be displayed
 
-- within the products page, alphabetical and pricing sorting is available to help assist the user finding the right product for them via low to high price sorting for example
-  > As a shopper I want to be able to sort a specific category of product so that I can find the best-priced product in a specific category and sort the products in that category by name
-- mentioned earlier is the ability to filter a certain category, condition, for example and with that now filtered products page users are able to sort via price or by name
-  > As a shopper I want to be able to search for a product by name or description so that I can find a specific product I'd like to purchase
-- users can type into the search bar in the main nav bar and search results, if they exist, will be displayed
-  > As a shopper I want to be able to easily see what I've searched for and the number of results so that I can quickly decide wether the product I want is available
-- users can type into the search bar in the main nav bar and it will display what the user has searched as well as search results if they exist
+- As a shopper I want to be able to easily see what I've searched for and the number of results so that I can quickly decide wether the product I want is available
+> users can type into the search bar in the main nav bar and it will display what the user has searched as well as search results if they exist
 
 ### Purchasing and Checkout
 
-> As a shopper I want to be able to easily select the quantity of a product when purchasing it so that I can ensure I dont accidentally select the wrong product or quantity
+- As a shopper I want to be able to easily select the quantity of a product when purchasing it so that I can ensure I dont accidentally select the wrong product or quantity
+> Contained in the product details page will be a quantity input box where users will then have the choice to enter what quantity they would like
 
-- contained in the product details page will be a quantity input box where users will then have the choice to enter what quantity they would like
-  > As a shopper I want to be able to view items in my bag to be purchased so that I can identify the total cost of my purchase and at all times I will recieve
-- the shopping bag once clicked contains all products that have been added to the bag, the quantity, the subtotal, delivery cost and grand total so users are always informed of what they are buying and for how much
-  > As a shopper I want to be able to easily enter my payment information so that I can checkout quickly and with no hassle
-- STRIPE credit-card processor allows users to do so
-  > As a shopper I want to be able to feel my personal and payment information is safe and secure so that I can confidently provide the needed info to make a purchase
-- STRIPE has been audited by a PCI-certified auditor and is certified to PCI Service Provider Level 1 which is the most stringent level of certification available in the payments industry
-  > As a shopper I want to be able to view my order confirmation after checkout so that I can verify that i haven't made any mistakes
-- a combination of views and templates set up in the checkout app, after completing their, users will be redirected to a copy of their confirmation order. This can also be seen in their user specific profile under my account
-  > As a shopper I want to be able to recieve an email confirmation after checking out so that I can keep the confirmation of what I've purchased for my records
-- email confirmations have been set up and so users will receive a customised email for this
+- As a shopper I want to be able to view items in my bag to be purchased so that I can identify the total cost of my purchase and at all times I will recieve
+ > the shopping bag once clicked contains all products that have been added to the bag, the quantity, the subtotal, delivery cost and grand total so users are always informed of what they are buying and for how much
+
+- As a shopper I want to be able to easily enter my payment information so that I can checkout quickly and with no hassle
+ > STRIPE credit-card processor allows users to do so
+
+- As a shopper I want to be able to feel my personal and payment information is safe and secure so that I can confidently provide the needed info to make a purchase
+ > STRIPE has been audited by a PCI-certified auditor and is certified to PCI Service Provider Level 1 which is the most stringent level of certification available in the payments industry
+- As a shopper I want to be able to view my order confirmation after checkout so that I can verify that i haven't made any mistakes
+ > a combination of views and templates set up in the checkout app, after completing their, users will be redirected to a copy of their confirmation order. This can also be seen in their user specific profile under my account
+
+- As a shopper I want to be able to recieve an email confirmation after checking out so that I can keep the confirmation of what I've purchased for my records
+ > email confirmations have been set up and so users will receive a customised email for this
 
 ### Admin and Management
 
-> As a store owner I want to be able to add a product so that I can add new items to my store
-> As a store owner I want to be able to edit/update a product so that I can change product prices, descriptions, images and other product criteria
-> As a store owner I want to be able to delete a product so that I can remove items that are no longer for sale
-
-- CRUD functionality has been enabled for superusers to create a new product, edit or update an existing product and delete a prodcut
+- As a store owner I want to be able to add a product so that I can add new items to my store
+- As a store owner I want to be able to edit/update a product so that I can change product prices, descriptions, images and other product criteria
+- As a store owner I want to be able to delete a product so that I can remove items that are no longer for sale
+ > CRUD functionality has been enabled for superusers to create a new product, edit or update an existing product and delete a prodcut
 
 COMPLETE WIREFRAMES HERE
 
